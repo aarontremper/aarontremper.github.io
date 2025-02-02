@@ -1,31 +1,232 @@
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Writer</h2>
-<!-- /wp:heading -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Portfolio</title>
+  
+  <!-- Embedded CSS -->
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<!-- wp:paragraph {"align":"left","fontSize":"medium"} -->
-<p class="has-text-align-left has-medium-font-size"><strong>Aaron Tremper</strong> (he/him/his) is a science writer and audio producer based in the Washington, D.C. metro area.  He earned his B.A. in English (with minors in creative writing and film production) from SUNY New Paltz and an M.A. in Journalism from the Craig Newmark Graduate School of Journalism’s Science and Health Reporting program.</p>
-<!-- /wp:paragraph -->
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+    }
 
-<!-- wp:image {"align":"left","id":2772,"width":"333px","height":"auto","aspectRatio":"1.2076923076923076","sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image alignleft size-large is-resized"><img src="http://aarontremper.com/wp-content/uploads/2021/01/137527828_10221421158190139_5266511196665940641_o-1024x850.jpg" alt="" class="wp-image-2772" style="aspect-ratio:1.2076923076923076;width:333px;height:auto"/></figure>
-<!-- /wp:image -->
+    h1, h2, h3 {
+      color: #333;
+    }
 
-<!-- wp:paragraph {"align":"left","fontSize":"medium"} -->
-<p class="has-text-align-left has-medium-font-size"> A former intern at <em>Audubon</em> magazine and Atlanta’s NPR station, WABE 90.1 FM, Aaron has covered and produced stories for radio, print, and digital media. His graduate capstone focused on increasing numbers of Tamanend's bottlenose dolphins off of New York City and Long Island, NY. His reporting appears in:</p>
-<!-- /wp:paragraph -->
+    /* Navigation Bar */
+    header {
+      background-color: #333;
+      padding: 10px 0;
+    }
 
-<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"500"}},"fontSize":"medium"} -->
-<p class="has-text-align-center has-medium-font-size" style="font-style:normal;font-weight:500"><strong><em>Science News</em> |<em> Science News Explores</em> | <em>Audubon</em> Magazine  | Atlanta's NPR station, WABE 90.1 FM | <em>Spectrum</em> News/NY1 | WBAI 99.5 | WHDD 91.9 FM: Robin Hood Radio | WHCR 90.3 FM <strong>|</strong> <em>NYCity News Service</em> | <em>Queens Daily Eagle </em>| </strong><em>The <strong>Scientific Inquirer</strong> </em><strong>|</strong> <strong><em>In Your Speakers</em> Media</strong></p>
-<!-- /wp:paragraph -->
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+    }
 
-<!-- wp:image {"align":"right","id":3089,"width":"516px","height":"auto","sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image alignright size-full is-resized"><img src="http://aarontremper.com/wp-content/uploads/2024/02/537745_10152341638575363_542191417_n.jpg" alt="" class="wp-image-3089" style="width:516px;height:auto"/></figure>
-<!-- /wp:image -->
+    nav ul li {
+      margin: 0 20px;
+    }
 
-<!-- wp:paragraph -->
-<p class="">At SUNY New Paltz, Aaron performed as a member of their nationally-ranked 2013 Slam Poetry Team. He also guest lectured on poetry, stage performance and the creative process at various universities throughout the Northeast. The following year, he worked with performance poet, Jared Singer in preparing the university team for the annual College Union Poetry Slam Invitational. His creative pieces have appeared in <em>The Legendary, Awosting Alchemy</em> and the <em>Stonesthrow Review</em>.</p>
-<!-- /wp:paragraph -->
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2rem;
+    }
 
-<!-- wp:spacer {"height":"178px"} -->
-<div style="height:178px" aria-hidden="true" class="wp-block-spacer"></div>
-<!-- /wp:spacer -->
+    /* Home Section */
+    #home {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+    }
+
+    #home p {
+      font-size: 1.2rem;
+    }
+
+    /* About Section */
+    #about {
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+
+    #about .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #about p {
+      font-size: 1.1rem;
+    }
+
+    /* Projects Section */
+    #projects {
+      background-color: #e9ecef;
+      padding: 50px 20px;
+    }
+
+    #projects .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card img {
+      max-width: 100%;
+    }
+
+    .project-info {
+      padding-top: 10px;
+    }
+
+    .project-info h3 {
+      margin: 10px 0;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+
+    #contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #contact label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    #contact input, #contact textarea {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #contact button {
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #contact button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="container">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Your go-to place for all things about my work and experience.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello! I am [Your Name], a passionate web developer with experience in creating beautiful and functional websites. I specialize in front-end development, using HTML, CSS, JavaScript, and various front-end frameworks.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300" alt="Project 1">
+        <div class="project-info">
+          <h3>Project 1</h3>
+          <p>A description of my first project.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300" alt="Project 2">
+        <div class="project-info">
+          <h3>Project 2</h3>
+          <p>A description of my second project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+  </footer>
+</body>
+</html>
