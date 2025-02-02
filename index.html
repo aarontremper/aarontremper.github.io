@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Portfolio</title>
+  <title>Journalist Portfolio</title>
   
   <!-- Embedded CSS -->
   <style>
@@ -16,20 +16,33 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
+      font-family: 'Arial', sans-serif;
       background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     h1, h2, h3 {
+      font-family: 'Georgia', serif;
       color: #333;
     }
 
-    /* Navigation Bar */
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Header (Navbar) */
     header {
       background-color: #333;
-      padding: 10px 0;
+      color: #fff;
+      padding: 20px 0;
     }
 
     nav ul {
@@ -39,189 +52,241 @@
     }
 
     nav ul li {
-      margin: 0 20px;
+      margin: 0 15px;
     }
 
     nav ul li a {
-      text-decoration: none;
       color: #fff;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
     }
 
-    /* Home Section */
-    #home {
-      background-color: #007bff;
+    nav ul li a:hover {
+      color: #e63946;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('https://via.placeholder.com/1500x600'); /* Replace with a real image */
+      background-size: cover;
+      background-position: center;
       color: #fff;
       text-align: center;
-      padding: 50px 0;
+      padding: 100px 20px;
     }
 
-    #home h1 {
-      font-size: 3rem;
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
     }
 
-    #home p {
-      font-size: 1.2rem;
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    /* About Section */
+    /* About Me Section */
     #about {
       padding: 50px 20px;
+      text-align: center;
       background-color: #fff;
     }
 
-    #about .container {
-      max-width: 800px;
-      margin: 0 auto;
+    #about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
     }
 
     #about p {
       font-size: 1.1rem;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* Projects Section */
-    #projects {
-      background-color: #e9ecef;
+    /* Featured Articles Section */
+    #articles {
+      background-color: #f8f8f8;
       padding: 50px 20px;
+      text-align: center;
     }
 
-    #projects .container {
-      max-width: 1000px;
-      margin: 0 auto;
+    #articles h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
     }
 
-    .project-card {
+    .article-card {
+      display: inline-block;
+      width: calc(33.33% - 40px);
+      margin: 0 20px 40px;
       background-color: #fff;
-      margin-bottom: 20px;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
     }
 
-    .project-card img {
-      max-width: 100%;
+    .article-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
 
-    .project-info {
-      padding-top: 10px;
+    .article-card:hover {
+      transform: scale(1.05);
     }
 
-    .project-info h3 {
-      margin: 10px 0;
+    .article-card h3 {
+      padding: 15px;
+      font-size: 1.5rem;
+      color: #333;
+      font-family: 'Georgia', serif;
+    }
+
+    .article-card p {
+      padding: 0 15px;
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .article-card a {
+      display: block;
+      padding: 10px;
+      background-color: #e63946;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 0 0 8px 8px;
+      transition: background-color 0.3s;
+    }
+
+    .article-card a:hover {
+      background-color: #333;
     }
 
     /* Contact Section */
     #contact {
       padding: 50px 20px;
       background-color: #fff;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
     }
 
     #contact form {
-      display: flex;
-      flex-direction: column;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     #contact label {
-      margin-bottom: 10px;
-      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      display: block;
     }
 
     #contact input, #contact textarea {
-      margin-bottom: 20px;
+      width: 100%;
       padding: 10px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 4px;
+      font-size: 1rem;
     }
 
     #contact button {
-      padding: 10px;
-      background-color: #007bff;
+      background-color: #e63946;
       color: #fff;
+      padding: 10px 20px;
+      font-size: 1.1rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       cursor: pointer;
     }
 
     #contact button:hover {
-      background-color: #0056b3;
+      background-color: #333;
     }
 
     /* Footer */
     footer {
-      text-align: center;
-      padding: 20px;
       background-color: #333;
       color: #fff;
-      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
     }
+
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
+  <!-- Header (Navbar) -->
   <header>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#articles">Articles</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Home Section -->
-  <section id="home">
-    <div class="container">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Your go-to place for all things about my work and experience.</p>
-    </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Discover my latest articles, features, and more as I share insights from the world of journalism.</p>
   </section>
 
-  <!-- About Section -->
+  <!-- About Me Section -->
   <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Hello! I am [Your Name], a passionate web developer with experience in creating beautiful and functional websites. I specialize in front-end development, using HTML, CSS, JavaScript, and various front-end frameworks.</p>
-    </div>
+    <h2>About Me</h2>
+    <p>I’m [Your Name], an experienced journalist with a passion for storytelling. With years of experience in both print and digital media, I focus on bringing complex issues to light through engaging narratives. From investigative reports to feature writing, I aim to create impactful content.</p>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2>My Projects</h2>
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300" alt="Project 1">
-        <div class="project-info">
-          <h3>Project 1</h3>
-          <p>A description of my first project.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://via.placeholder.com/300" alt="Project 2">
-        <div class="project-info">
-          <h3>Project 2</h3>
-          <p>A description of my second project.</p>
-        </div>
-      </div>
+  <!-- Featured Articles Section -->
+  <section id="articles">
+    <h2>Featured Articles</h2>
+    <div class="article-card">
+      <img src="https://via.placeholder.com/600x300" alt="Article Image">
+      <h3>The Future of Journalism in the Digital Age</h3>
+      <p>A look at how the digital transformation is reshaping newsrooms and journalism.</p>
+      <a href="#">Read More</a>
+    </div>
+    <div class="article-card">
+      <img src="https://via.placeholder.com/600x300" alt="Article Image">
+      <h3>Breaking News: A New Era of Investigative Reporting</h3>
+      <p>How investigative journalists are using data and new technology to uncover truth.</p>
+      <a href="#">Read More</a>
+    </div>
+    <div class="article-card">
+      <img src="https://via.placeholder.com/600x300" alt="Article Image">
+      <h3>Social Media: A Journalist's New Best Friend</h3>
+      <p>The power of social media in driving public conversation and breaking stories.</p>
+      <a href="#">Read More</a>
     </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form action="#" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <h2>Contact Me</h2>
+    <form action="#" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <!-- Footer -->
