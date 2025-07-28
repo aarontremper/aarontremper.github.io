@@ -79,10 +79,12 @@ pre {
   overflow-x: auto;
 }
 
-/* Solid border */
-hr.solid {
-  border-top: 3px solid #bbb;
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
 }
+
 th, td {
   text-align:left;
   padding:5px 10px;
