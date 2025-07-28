@@ -81,7 +81,7 @@ pre {
 
 /* Rounded border */
 hr.rounded {
-  border-top: 15px solid #bbb;
+  border-top: 10px solid #bbb;
   border-radius: 5px;
 }
 
